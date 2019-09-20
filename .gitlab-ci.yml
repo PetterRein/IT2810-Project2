@@ -7,7 +7,10 @@ build site:
   artifacts:
     expire_in: 1 week
     paths:
-      - dist
+      - ./build
+cache:
+  paths:
+    - node_modules/
 
 deploy:
   image: alpine
@@ -18,4 +21,4 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - rsync -rav --delete dist/ pettegre@it2810-40.idi.ntnu.no:/var/www/html/prosjekt2/"
+    - rsync -rav --delete build/ pettegre@it2810-40.idi.ntnu.no:/var/www/html/prosjekt2/
