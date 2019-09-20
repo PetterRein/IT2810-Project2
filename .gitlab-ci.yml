@@ -1,4 +1,6 @@
 build site:
+  only:
+    - merge_requests
   image: node:latest
   stage: build
   script:
@@ -13,6 +15,8 @@ cache:
     - node_modules/
 
 deploy:
+  only:
+    - merge_requests
   image: alpine
   stage: deploy
   script:
