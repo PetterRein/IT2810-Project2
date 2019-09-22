@@ -1,0 +1,20 @@
+input {
+    position: relative;
+}
+
+.title {
+    text-align: left;
+    color: black;
+    margin: 0 0 1rem 0;
+}
+
+.mediaChooser {
+    margin: 1rem 0 1rem 0;
+}
+
+.list {
+    list-style-type: none;
+    margin: auto;
+    padding-left: 0; 
+    display: block;
+}
