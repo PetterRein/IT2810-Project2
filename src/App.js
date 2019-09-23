@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Display from './components/Display'
 import MediaChooser from './components/MediaChooser'
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
       <header className="App-header">
         <MediaChooser />
       </header>
+      <main>
+        <Display />
+      </main>
     </div>
   );
 }
