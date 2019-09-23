@@ -9,4 +9,5 @@ img {
     border: solid;
     border-width: 4rem;
     border-color: rgb(37, 37, 44);
+    box-sizing: border-box;
 }

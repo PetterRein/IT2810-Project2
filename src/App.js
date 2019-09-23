@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.css';
-import Display from './components/Display'
-import MediaChooser from './components/MediaChooser'
+import Display from 'components/Display'
+import DisplayTabs from 'components/DisplayTabs'
+import MediaChooser from 'components/MediaChooser'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <MediaChooser />
       </header>
       <main>
+        <DisplayTabs />
         <Display />
+        <MediaChooser />
       </main>
     </div>
   );

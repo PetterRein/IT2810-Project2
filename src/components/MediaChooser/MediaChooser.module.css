@@ -4,12 +4,12 @@ input {
 
 .title {
     text-align: left;
-    color: black;
+    color: rgb(184, 174, 174);
     margin: 0 0 1rem 0;
 }
 
 .mediaChooser {
-    margin: 1rem 0 1rem 0;
+    font-size: 1.5rem;
 }
 
 .list {
