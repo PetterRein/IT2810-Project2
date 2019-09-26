@@ -28,8 +28,8 @@ function TypeList(props) {
 class MediaChooser extends React.Component {
 
     typeChoices = [
-        {"Picture": ["Color", "Abstract", "inverted"]},
-        {"Sound": ["Pop", "Avant Garde", "Experimental"]},
+        {"Picture": ["Color", "Abstract", "Inverted"]},
+        {"Sound": ["Pop", "Avantgarde", "Experimental"]},
         {"Text": ["Small", "Big", "Scrambled"]}
     ]
 
