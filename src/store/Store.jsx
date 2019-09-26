@@ -21,27 +21,26 @@ export const withStore = WrappedComponent =>
   export default class StoreDB extends Component {
     state = {
       selected: {
-        image: "abstract",
+        picture: "abstract",
         text: "poem",
-        sound: "bass"
+        sound: "pop"
       },
       display: 1
     }
 
     handleSelect = ({target:{
         value, name
-      }}) => this.setState(({selected}) => ({selected: {
-        ...selected,
-        [name]: value
-      }}))
+      }}) =>
+        this.setState(({selected}) => ({selected: {
+          ...selected,
+          [name.toLowerCase()]: value.toLowerCase()
+        }}))
 
-    updateDisplay = ({target:{
-        value
-    }}) => this.setState(({selected}) => ({selected: {
-        ...selected,
-        "display": value
-    }}))
-  
+    updateDisplay = (value) => {
+      this.setState({display: value}, () => {
+      })
+    }
+
     render() {
       return(
         <Store.Provider
