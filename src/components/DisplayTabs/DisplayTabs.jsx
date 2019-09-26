@@ -1,11 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
 import _s from './DisplayTabs.module.css'
+import {withStore} from 'store/Store'
 
 class DisplayTabs extends React.Component {
-
     clickHandler = event => {
-        console.log(event.id)
+        const {updateDisplay} = this.props
+        updateDisplay(event.id)
     }
 
     render() {
@@ -26,4 +27,4 @@ class DisplayTabs extends React.Component {
     }
 }
 
-export default DisplayTabs
+export default withStore(DisplayTabs)
