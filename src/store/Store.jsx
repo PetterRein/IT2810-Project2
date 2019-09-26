@@ -21,9 +21,9 @@ export const withStore = WrappedComponent =>
   export default class StoreDB extends Component {
     state = {
       selected: {
-        Picture: "abstract",
-        Text: "poem",
-        Sound: "bass"
+        picture: "abstract",
+        text: "poem",
+        sound: "bass"
       },
       display: 1
     }
@@ -33,7 +33,7 @@ export const withStore = WrappedComponent =>
       }}) =>
         this.setState(({selected}) => ({selected: {
           ...selected,
-          [name]: value
+          [name.toLowerCase()]: value.toLowerCase()
         }}))
 
 
