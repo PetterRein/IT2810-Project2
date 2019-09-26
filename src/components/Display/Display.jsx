@@ -1,5 +1,4 @@
 import React from 'react'
-import _s from './Display.module.css'
 import {withStore} from 'store/Store'
 
 class Display extends React.Component {
@@ -67,14 +66,14 @@ class Display extends React.Component {
     render (){
         const { image, sound, text } = this.state
         return (
-            <div className={_s.imageContainer}>
+            <div>
                 {image ? undefined : image.url = window.location.href + "assets/images/abstract/abstract_1.svg"}
                 <img src={ image.url } alt="picture1"/>
                 {sound ? undefined : sound.url = window.location.href + "assets/audio/pop/pop_1.mp3"}
                 <audio controls ref="audio">
                     <source src={ sound.url } type="audio/mpeg" />
                         Your browser does not support the audio element.
-                </audio>
+                </audio> <br />
                 { text ? <span>{text.text} <br />- {text.author}</span> : undefined }
             </div>
         )

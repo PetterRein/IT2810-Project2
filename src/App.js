@@ -24,21 +24,10 @@ function App() {
 		  <div class="c4">
 			  <div class="page_box">
 				  <div class="box_header tabbed">
-					<a class="tab c2" href="#">
-					  Tab1
-					</a>
-					<a class="tab c2" href="#">
-					  Tab2
-					</a>
-					<a class="tab c2" href="#">
-					  Tab3
-					</a>
-					<a class="tab c2" href="#">
-					  Tab4
-					</a>
+					  <DisplayTabs />
 				  </div>
 				  <div class="box_content">
-					<p>Main stuff</p>
+					<Display />
 				  </div>
 			  </div>
 		  </div>

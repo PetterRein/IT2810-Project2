@@ -1,6 +1,4 @@
 import React from 'react'
-import cx from 'classnames'
-import _s from './DisplayTabs.module.css'
 import {withStore} from 'store/Store'
 
 class DisplayTabs extends React.Component {
@@ -18,11 +16,11 @@ class DisplayTabs extends React.Component {
         ]
 
         return (
-            <div className={cx(_s.DisplayTabs)}>
+            <>
                 {buttons.map(button =>
-                    <button key={button.id} onClick={() => this.clickHandler(button)}>{button.text}</button>
+                    <button className="tab c2" key={button.id} onClick={() => this.clickHandler(button)}>{button.text}</button>
                 )}
-            </div>
+            </>
         )
     }
 }
