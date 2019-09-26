@@ -29,7 +29,7 @@ class MediaChooser extends React.Component {
 
     typeChoices = [
         {"Picture": ["Color", "Abstract", "inverted"]},
-        {"Sound": ["Fast", "Slow", "Pitched"]},
+        {"Sound": ["Pop", "Avant Garde", "Experimental"]},
         {"Text": ["Small", "Big", "Scrambled"]}
     ]
 
