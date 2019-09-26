@@ -31,7 +31,7 @@ class MediaChooser extends React.Component {
     typeChoices = [
         {"Picture": ["Color", "Abstract", "Inverted"]},
         {"Sound": ["Pop", "Avantgarde", "Experimental"]},
-        {"Text": ["Small", "Big", "Scrambled"]}
+        {"Text": ["Poem", "Quote", "Haiku"]}
     ]
 
     choiceList = this.typeChoices.map((choices) =>

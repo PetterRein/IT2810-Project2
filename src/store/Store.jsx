@@ -23,7 +23,7 @@ export const withStore = WrappedComponent =>
       selected: {
         picture: "abstract",
         text: "poem",
-        sound: "bass"
+        sound: "pop"
       },
       display: 1
     }
@@ -35,7 +35,6 @@ export const withStore = WrappedComponent =>
           ...selected,
           [name.toLowerCase()]: value.toLowerCase()
         }}))
-
 
     updateDisplay = (value) => {
       this.setState({display: value}, () => {
