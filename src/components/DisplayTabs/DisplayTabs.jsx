@@ -18,7 +18,7 @@ class DisplayTabs extends React.Component {
         return (
             <>
                 {buttons.map(button =>
-                    <button className="tab c2" key={button.id} onClick={() => this.clickHandler(button)}>{button.text}</button>
+                    <a className="tab c2" key={button.id} onClick={() => this.clickHandler(button)}>{button.text}</a>
                 )}
             </>
         )
