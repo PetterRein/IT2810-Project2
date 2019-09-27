@@ -15,9 +15,6 @@ function App() {
 		  <div class="header_bar">
 			  <h3 class="head_text">Project 2</h3>
 		  </div>
-		  <div class="page_header">
-			  <h3>Optional subpage / description</h3>
-		  </div>
 	  </header>
 	  <body>
 	  <div class="row">

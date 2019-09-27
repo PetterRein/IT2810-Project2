@@ -19,13 +19,49 @@ export const withStore = WrappedComponent =>
   }
 
   export default class StoreDB extends Component {
+
     state = {
       selected: {
         picture: "abstract",
         text: "poem",
         sound: "pop"
       },
-      display: 1
+      display: 1, 
+      displayValues: {
+        image: {
+            url: ""
+        },
+        sound: {
+            url: ""
+        },
+        text: null
+      }
+    }
+
+    saveToSession = () => {
+      let session = sessionStorage.getItem("session") ? JSON.parse(sessionStorage.getItem("session")) : []
+      const value = {
+        image: this.state.displayValues.image,
+        sound: this.state.displayValues.sound,
+        text: this.state.displayValues.text
+      }
+      console.log(session)
+      session.push(value)
+      sessionStorage.setItem("session", JSON.stringify(session))
+    }
+
+    loadFavoritt = () => {
+      let favoritt = JSON.parse(localStorage.getItem("favoritt"))
+      this.setState({displayValues: favoritt})
+    }
+
+    saveFavoritt = () => {
+      const value = {
+          image: this.state.displayValues.image,
+          sound: this.state.displayValues.sound,
+          text: this.state.displayValues.text
+      }
+      localStorage.setItem("favoritt", JSON.stringify(value))
     }
 
     handleSelect = ({target:{
@@ -47,6 +83,9 @@ export const withStore = WrappedComponent =>
           value={{
             updateDisplay: this.updateDisplay,
             handleSelect: this.handleSelect,
+            saveFavoritt: this.saveFavoritt,
+            loadFavoritt: this.loadFavoritt,
+            saveToSession: this.saveToSession,
             ...this.state
           }}
         >
