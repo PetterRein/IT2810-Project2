@@ -8,6 +8,7 @@ class Display extends React.Component {
     }
 
     componentDidUpdate = ({ display: prevDisplay, selected: prevSelected}) => {
+        this.props.saveToSession()
         const picture = this.props.selected.picture
         const display = this.props.display
         const sound = this.props.selected.sound
@@ -109,9 +110,9 @@ class Display extends React.Component {
                         Your browser does not support the audio element.
                 </audio> <br />
                 { text ? <span>{text.text} <br />- {text.author}</span> : undefined }
-                <button onClick={this.props.saveFavoritt}>Save</button>
-                <button onClick={this.props.loadFavoritt}>Load</button>
-                <button onClick={this.props.saveToSession}>SaveSession</button>
+                <br />
+                <button onClick={this.props.saveFavoritt}>Save Favoritt</button>
+                <button onClick={this.props.loadFavoritt}>Load Favoritt</button>
             </div>
         )
     }
