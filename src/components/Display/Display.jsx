@@ -75,6 +75,8 @@ class Display extends React.Component {
                         Your browser does not support the audio element.
                 </audio> <br />
                 { text ? <span>{text.text} <br />- {text.author}</span> : undefined }
+                <button onClick={this.props.saveFavoritt}>Save</button>
+                <button onClick={this.props.loadFavoritt}>Load</button>
             </div>
         )
     }
